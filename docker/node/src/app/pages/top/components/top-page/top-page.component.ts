@@ -25,12 +25,11 @@ export const randomImageApiUrls = {
 }
 
 @Component({
-  selector:'http-page',
-  templateUrl:'./http-page.component.html',
-  styleUrls:['./http-page.component.css']
+  selector:'top-page',
+  templateUrl:'./top-page.component.html',
+  styleUrls:['./top-page.component.css']
 })
-export class HttpPageComponent{
-  public limit:number = 10;
+export class TopPageComponent{
   public mainImages;
   public readonly width = 200;
   public readonly height =300;

@@ -8,6 +8,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "allowJs": true, //add to remove warning ref)https://www.l08084.com/entry/2018/02/09/154824
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
