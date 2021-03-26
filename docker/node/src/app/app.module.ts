@@ -6,6 +6,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopModule } from './pages/top/top.module';
+// import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TopModule } from './pages/top/top.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    TopModule
+    TopModule,
+    // SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

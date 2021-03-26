@@ -41,8 +41,12 @@ export class RandomImageService{
 
   //   return of(this.mainImages)
   // }
-  public getImageList(width:number=this.defaultImageWidth,height:number=this.defaultImageHeight){
-    return this.httpClient.get(randomImageApiUrls.byList(10)).pipe(take(1),map((items:IRandomImageListResponse)=>{
+  public getImageList(
+    amount:number,
+    width:number=this.defaultImageWidth,
+    height:number=this.defaultImageHeight
+    ):Observable<string[]>{
+    return this.httpClient.get(randomImageApiUrls.byList(amount)).pipe(take(1),map((items:IRandomImageListResponse)=>{
       return items.map(({id})=>randomImageApiUrls.byIdandWidthandHeight(id,width,height))
     }));
   }

@@ -9,11 +9,12 @@ import　{RandomImageService} from "../../services/random-image.service"
 })
 export class TopPageComponent implements OnInit{
   public mainImages:string[];
+  public readonly imagescount=  10;
 
   constructor(private readonly randomImageService:RandomImageService){}
 
   public ngOnInit():void{
-    this.randomImageService.getImageList().subscribe(
+    this.randomImageService.getImageList(this.imagescount).subscribe(
       images => {
         this.mainImages=images;
         console.log(this.mainImages);
